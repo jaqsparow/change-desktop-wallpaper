@@ -1,3 +1,11 @@
+"""
+Author: Javed Shaikh
+Purpose: A CLI APP to change desktop wallpaper every minute or so
+Usage: wallpaper.py -t <time to change wallpaper in minutes>
+
+Example: To change wallpaper every 2 minutes :
+C:\Users\jaqsp>wallpaper.py -t 2
+"""
 import requests,argparse,time
 import ctypes,win32con,os,random
 
