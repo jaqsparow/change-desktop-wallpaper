@@ -6,7 +6,8 @@ This is a CLI APP based on Python to change Windows desktop wallpaper every minu
 
 ### Usage: 
 
-wallpaper.py -t <time to change wallpaper in minutes>
+wallpaper.py -t TIME
+Where TIME is time in minutes
 
 #### Example: 
 
