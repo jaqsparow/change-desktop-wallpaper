@@ -1,9 +1,9 @@
-# change-desktop-wallpaper
+# change-desktop-wallpaper for winodws and Linux OS
 #### Author: Javed Shaikh
 #### Auhtor Blog: @https://shaikhu.com
 ## Purpose: 
-This is a CLI APP based on Python to change Windows desktop wallpaper every minute or so
-
+This is a CLI APP based on Python to change Windows and Linux desktop wallpaper every minute or so
+This code has been tested on both Windows 10 and Ubuntu 20.04 LTS. 
 ### Usage: 
 
 wallpaper.py -t TIME
