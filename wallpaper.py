@@ -8,7 +8,7 @@ C:\Users\jaqsp>wallpaper.py -t 2
 """
 import requests,argparse,time
 import ctypes,win32con,os,random
-
+#Get the wallpaper and save it as temp.jpg
 def get_wallpaper():
     #Set your api key here
     #Get your api key at https://www.pexels.com/api/new/
@@ -33,10 +33,18 @@ def get_wallpaper():
             f.write(img.content)
     else:
         print('error in making http request')
+#Set wallpaper
 def set_wallpaper():
     get_wallpaper()
-    path = os.getcwd()+'\\temp.jpg'
-    ctypes.windll.user32.SystemParametersInfoW(20,0,path,0)
+    system_name = platform.system().lower()
+    path = ''
+    if system_name =='linux':
+        path = os.getcwd()+'/temp.jpg'
+        COMMAND = "gsettings set org.gnome.desktop.background picture-uri file:" + path
+        os.system(COMMAND)
+    elif system_name == 'windows':
+        path = os.getcwd()+'\\temp.jpg'
+        ctypes.windll.user32.SystemParametersInfoW(20,0,path,0)
 
 if __name__ == "__main__":
 
